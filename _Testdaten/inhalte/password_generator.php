@@ -2,7 +2,10 @@
 
 function zufallspasswort($length = 8) {
     $passwords = array();
-    $array_of_characters = array_merge(range('A','Z'), range('a','z'), range('0','9'));
+    $symbols = array("°","!","\"","§","$","%","&","/","(",")","=","?","*","_",":",",",".","-","+","~","\\","{","[","]","}","^","@","€",">","|","#",".");
+    $array_of_characters = array_merge(range('A','Z'), range('a','z'), range('0','9'), $symbols);
+    print_r($array_of_characters);
+    echo "<br>";
     $nr_of_passwords = 10;
     $password = "";
     // Create the password by $nr_of_passwords.
